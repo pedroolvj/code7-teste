@@ -1,0 +1,296 @@
+.nav--bar {
+    position: fixed;
+    height: 4.5rem;
+    width: 100%;
+    background: #18181800;
+    transition: all 600ms ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav--scrolled {
+    background: #181818;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.user--name {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.user--picture {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background: #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture {
+    font-size: 2rem;
+    color: rgb(126, 126, 126);
+    height: 2rem;
+    width: 2rem;
+}
+
+.film {
+    position: relative;
+    height: 90%;
+    width: 100%;
+    background: #181818;
+}
+
+.film--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.film--feature {
+    height: 100%;
+    width: 100%;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-position: center center, center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+}
+
+.film--title {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.film--infos {
+    max-width: 1000px;
+    color: #a9a9a9;
+    font-size: 1.2rem;
+    padding: 1rem 10%;
+}
+
+.info {
+    color: #fff;
+    font-weight: 500;
+}
+
+.film--item {
+    margin-bottom: 0.2rem;
+}
+
+.btns {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--watch {
+    background: #dc143c;
+    border: 0;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-weight: 800;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.btn--watch:hover {
+    background: #b30f30;
+}
+
+.play--arrow {
+    margin-right: 1rem;
+    font-size: 2rem;
+    height: 2rem;
+}
+
+.btn--save {
+    background: #80808052;
+    border: 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 0.2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.btn--save:hover {
+    background: #5e5e5e52;
+}
+
+.save {
+    font-size: 2rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.all--films {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: #181818;
+    padding: 4rem 0;
+   
+}
+
+.all--films--header {
+    color: #fff;
+    padding-left: 5rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.all--films--container {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 5rem;
+}
+
+.all--films--card {
+    height: auto;
+    width: 22rem;
+    min-width: 22rem;
+    background: #272727;
+    margin-right: 1.5rem;
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+.all--films--card:hover {
+    transform: scale(1.05);
+}
+
+.all--films--selected {
+    transform: scale(1.05);
+}
+
+.film--poster {
+    width: 100%;
+}
+
+.all--films--infos {
+    padding: 1rem 1rem;
+    color: #fff;
+}
+
+.all--films--title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.all--films--collapse {
+    margin-top: 0.9rem;
+    height: auto;
+    width: calc(100% - 10rem);
+    background: #1d1d1d;
+    padding: 2rem 5rem;
+    color: #fff;
+    overflow: hidden;
+    transition: max-height 2000ms ease;
+}
+
+.all--films--collapse--title {
+    font-size: 3.5rem;
+}
+
+.all--films--item {
+    font-size: 1.3rem;
+    color: #a2a2a2;
+    margin-bottom: 0.2rem;
+}
+
+.all--films--btns {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .all--films--card {
+        width: 20vw;
+        min-width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .film {
+        height: auto;
+    }
+
+    .film--feature {
+        padding-bottom: 3rem;
+    }
+
+    .film--title {
+        margin-top: 6rem;
+        font-size: 2rem;
+    }
+
+    .film--infos {
+        padding: 0;
+    }
+
+    .all--films--header {
+        padding-left: 2rem;
+    }
+
+    .all--films--container {
+        height: 100%;
+        padding: 1rem 2rem;
+        overflow-x: scroll;
+    }
+
+    .all--films--card {
+        width: 15rem;
+        min-width: 15rem;
+        margin-right: 1rem;
+    }
+
+    .all--films--collapse {
+        width: calc(100% - 4rem);
+        padding: 2rem;
+    }
+
+    .all--films--collapse--title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .all--films--btns {
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,33 @@
+<section class="home">
+    <div class="home--container"
+    [ngClass]="pageLoaded ? '' : 'home--container--animation'">
+        <div class="header--container">
+            <h1 class="header">
+                Code7 App
+            </h1>
+            <h3 class="header--subtitle">
+                Escolha o teste abaixo.
+            </h3>
+        </div>
+        <div class="buttons--container">
+            <div class="btn"
+            (click)="setPage('grid')">
+                <h2 class="btn--title">
+                    Grid
+                </h2>
+                <p class="btn--text">
+                    &nbsp;&nbsp;12. Utilizando as propriedades de grid do CSS3, cumpra os requisitos e implemente uma interface web
+                </p>
+            </div>
+            <div class="btn"
+            (click)="setPage('films')">
+                <h2 class="btn--title">
+                    Film list
+                </h2>
+                <p class="btn--text">
+                    &nbsp;&nbsp;13 &14. Utilizando o framework Angular, crie um algoritmo que irá exibir uma listagem de filmes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

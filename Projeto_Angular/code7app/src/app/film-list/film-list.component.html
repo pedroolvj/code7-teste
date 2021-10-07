@@ -1,0 +1,92 @@
+<nav class="nav--bar"
+[ngClass]="navScroll ? 'nav--scrolled' : ''">
+    <div class="user">
+        <div class="user--name">João Pedro Oliveira</div>
+        <div class="user--picture">
+            <mat-icon 
+                aria-hidden="false" 
+                aria-label="Profile picture"
+                class="picture">
+                person
+            </mat-icon>
+        </div>
+    </div>
+</nav>
+
+<section class="film">
+    <div class="film--container">
+        <div class="film--feature"
+        [style.background-image]="featureBackground()">
+            <div class="film--title">
+                <h1>{{filmList[featureIndex].nome}}</h1>
+            </div>
+            <div class="film--infos">
+                <div class="film--item film--description"><span class="info">Descrição:</span> {{filmList[featureIndex].descricao}}</div>
+                <div class="film--item film--director"><span class="info">Diretor:</span>  {{filmList[featureIndex].diretor}}</div>
+                <div class="film--item film--genre"><span class="info">Gênero:</span>  {{filmList[featureIndex].genero}}</div>
+                <div class="film--item film--year"><span class="info">Ano:</span>  {{filmList[featureIndex].ano}}</div>
+                <div class="btns">
+                    <button class="btn--watch">
+                        <mat-icon 
+                            aria-hidden="false" 
+                            aria-label="Play arrow"
+                            class="play--arrow">
+                            play_arrow
+                        </mat-icon> Assistir
+                    </button>
+                    <button class="btn--save">
+                        <mat-icon 
+                            aria-hidden="false" 
+                            aria-label="Save"
+                            class="save">
+                            add
+                        </mat-icon>
+                    </button>
+               </div>
+            </div>           
+        </div>
+    </div>
+</section>
+
+<section class="all--films">
+    <h1 class="all--films--header">Todos os filmes</h1>
+    <div class="all--films--container">
+        <div class="all--films--card"
+        [ngClass]="filmSelected == i ? 'all--films--selected' : ''"
+        *ngFor="let Films of filmList; index as i"
+        (click)="selectMovie(i)">
+            <div class="all--films--poster">
+                <img [src]="Films.poster" alt="" class="film--poster">
+            </div>
+            <div class="all--films--infos">
+                <h2 class="all--films--title">{{Films.nome}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="all--films--collapse"
+    *ngIf="collapseFilm">
+        <h1 class="all--films--collapse--title">{{filmList[filmSelected].nome}}</h1>
+        <div class="all--films--item all--films--description"><span class="info">Descrição:</span>  {{filmList[filmSelected].descricao}}</div>
+        <div class="all--films--item all--films--director"><span class="info">Diretor:</span>  {{filmList[filmSelected].diretor}}</div>
+        <div class="all--films--item all--films--genero"><span class="info">Gênero:</span>  {{filmList[filmSelected].genero}}</div>
+        <div class="all--films--item all--films--ano"><span class="info">Ano:</span>  {{filmList[filmSelected].ano}}</div>
+        <div class="all--films--btns">
+            <button class="btn--watch">
+                <mat-icon 
+                    aria-hidden="false" 
+                    aria-label="Play arrow"
+                    class="play--arrow">
+                    play_arrow
+                </mat-icon> Assistir
+            </button>
+            <button class="btn--save">
+                <mat-icon 
+                    aria-hidden="false" 
+                    aria-label="Save"
+                    class="save">
+                    add
+                </mat-icon>
+            </button>
+       </div>
+    </div>
+</section>
